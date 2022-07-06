@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang ="en">
+<style>
+.bg-image {
+  /* The image used */
+  background-image: url("books.jpg");
+  
+
+  /* Full height */
+  height: 100%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px;
+  font-weight: bold;
+  
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #283c3c;
+  overflow: hidden;
+}
+
+  
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #ebdcd2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #197378;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #197378;
+  color: #ebdcd2;
+}
+body{
+    color: #000;
+    margin-top:20px;
+}
+.section {
+    padding: 100px 0;
+    position: relative;
+}
+.gray-bg {
+    background-color: #f5f5f5;
+}
+img {
+    max-width: 80%;
+}
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+/* Settings cog task bar */
+.topnavset a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav .search-container {
+  float: right;
+}
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.topnav .search-container button {
+  float: center;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #782d23;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+.topnav .search-container button:hover {
+  background: #c34637;
+}
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+body {
+  padding: 25px;
+  background-color: white;
+  color: black;
+  font-size: 25px;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The seller (background) */
+.seller {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* seller Content/Box */
+.seller-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+</style>
+<head>
+  <title>CollegeBookSeller.com</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<div class="bg-image">
+			<h1 class="site-title" style="font-family: Garamond; color: white; font-size: 60px;"><center>College Book Seller</center></h1>
+			<h2 class="site-description" style="font-family: serif; color: white; font-size: 30px;"><center>Welcome to College Book Seller, here you can sell your past course textbooks or even buy current textbooks</center></h2>
+		</div>
+	 <div class="topnav">
+    <a class="active" href="LoginPage.html">Login</a>
+	<a href="#" onclick="myFunction()">Dark Mode</a>
+    </div>
+
+<script>
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+</script>
+<body>
+  <form class="bookseller-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+		<img src="https://www.vst-plugin.shop/wp-content/uploads/2019/07/Terms-and-Conditions-Banner-Image-01.png" alt="Image" class="image" style="width:300px;height:200px">
+    </div>
+		<div class="container">
+		<p><center>
+	<h3><b> Terms & Conditions</b></h3>
+These terms of use govern your use of our website; by using our website, you agree to these terms of use in full. If you disagree with these terms of use or any part of these terms of use, you must not use our website.
+You must be at least 16 years of age to use our website. By using our website and by agreeing to these terms of use, you warrant and represent that you are at least 16 years of age.
+Our website uses cookies. By using our website and agreeing to these terms of use, you consent to our use of cookies in accordance with the terms of our [privacy policy / cookies policy].
+ 
+	<h4><b>Licence to use website</b></h4>
+Unless otherwise stated, we or our licensors own the intellectual property rights in the website and material on the website. Subject to the licence below, all these intellectual property rights are reserved.
+You may view, download for caching purposes only, and print pages from the website for your own personal use, subject to the restrictions set out below and elsewhere in these terms of use.
+You must not:
+<dd><li>republish material from this website (including republication on another website);</dd></li>
+<dd><li>sell, rent or sub-license material from the website;</dd></li>
+<dd><li>show any material from the website in public;</dd></li>
+<dd><li>reproduce, duplicate, copy or otherwise exploit material on our website for a commercial purpose;</dd></li>
+<dd><li>edit or otherwise modify any material on the website; or</dd></li>
+<dd><li>redistribute material from this website [except for content specifically and expressly made available for redistribution]</dd></li>
+ 
+	<h4>Acceptable use</h4>
+You must not use our website in any way that causes, or may cause, damage to the website or impairment of the availability or accessibility of the website; or in any way which is unlawful, illegal, fraudulent or harmful, or in connection with any unlawful, illegal, fraudulent or harmful purpose or activity.
+You must not use our website to copy, store, host, transmit, send, use, publish or distribute any material which consists of (or is linked to) any spyware, computer virus, Trojan horse, worm, keystroke logger, rootkit or other malicious computer software.
+You must not conduct any systematic or automated data collection activities (including, without limitation, scraping, data mining, data extraction and data harvesting) on or in relation to our website without our express written consent.
+You must not use our website to transmit or send unsolicited commercial communications.
+You must not use our website for any purposes related to marketing without our express written consent.
+ 
+	<h4><b>Restricted access</b></h4>
+Access to certain areas of our website is restricted. We reserve the right to restrict access to other areas of our website, or indeed our whole website, at our discretion.
+ 
+If we provide you with or you generate a user ID and password to enable you to access restricted areas of our website or other content or services, you must ensure that the password is kept confidential.
+You must notify us in writing immediately if you become aware of any unauthorised use of your account or password.
+You are responsible for any activity on our website arising out of any failure to keep your password confidential and may be held liable for any losses arising out of such a failure.
+You must not use any other person's user ID and password to access our website.
+We may disable your user ID and password at any time in our sole discretion with or without notice or explanation.
+ 
+	<h4><b>User content</b></h4>
+In these terms of use, "your content" means material (including, without limitation, text, images, audio material, video material and audio-visual material) that you submit to our website, for whatever purpose.
+You grant to us a worldwide, irrevocable, non-exclusive, royalty-free licence to use, reproduce, adapt, publish, translate and distribute your content in any existing or future media. You also grant to us the right to sub-license these rights and the right to bring an action for infringement of these rights.
+You warrant and represent that your content will comply with these terms of use.
+Your content must not be illegal or unlawful, must not infringe any third party's legal rights and must not be capable of giving rise to legal action whether against you or us or a third party (in each case under any applicable law).
+You must not submit any content to the website that is or has ever been the subject of any threatened or actual legal proceedings or other similar complaint.
+We reserve the right to edit or remove any material submitted to our website, or stored on our servers, or hosted or published upon our website.
+Notwithstanding our rights under these terms of use in relation to your content, we do not undertake to monitor the submission of such content to, or the publication of such content on, our website.
+ 
+	<h4><b>Limited warranties</b></h4>
+We do not warrant the completeness or accuracy of the information published on this website; nor do we commit to ensuring that the website remains available or that the material on the website is kept up to date.
+To the maximum extent permitted by applicable law, we exclude all representations, warranties and conditions relating to this website and the use of this website (including, without limitation, any warranties implied by law in respect of satisfactory quality, fitness for purpose and/or the use of reasonable care and skill).
+ 
+	<h4><b>Limitations and exclusions of liability</b></h4>
+Nothing in these terms of use will: (a) limit or exclude our or your liability for death or personal injury resulting from negligence; (b) limit or exclude our or your liability for fraud or fraudulent misrepresentation; (c) limit any of our or your liabilities in any way that is not permitted under applicable law; or (d) exclude any of our or your liabilities that may not be excluded under applicable law.
+The limitations and exclusions of liability set out in this Section and elsewhere in these terms of use: (a) are subject to the preceding paragraph; and (b) govern all liabilities arising under these terms of use or in relation to the subject matter of these terms of use, including liabilities arising in contract, in tort (including negligence) and for breach of statutory duty.
+ 
+To the extent that the website and the information and services on the website are provided free of charge, we will not be liable for any loss or damage of any nature.
+We will not be liable to you in respect of any losses arising out of any event or events beyond our reasonable control.
+We will not be liable to you in respect of any business losses, including (without limitation) loss of or damage to profits, income, revenue, use, production, anticipated savings, business, contracts, commercial opportunities or goodwill.
+We will not be liable to you in respect of any loss or corruption of any data, database or software
+We will not be liable to you in respect of any special, indirect or consequential loss or damage.
+ 
+	<h4><b>Indemnity</b></h4>
+You hereby indemnify us and undertake to keep us indemnified against any losses, damages, costs, liabilities and expenses (including, without limitation, legal expenses and any amounts paid by us to a third party in settlement of a claim or dispute on the advice of our legal advisers) incurred or suffered by us arising out of any breach by you of any provision of these terms of use, or arising out of any claim that you have breached any provision of these terms of use.
+ 
+	<h4><b>Breaches of these terms of use</b></h4>
+Without prejudice to our other rights under these terms of use, if you breach these terms of use in any way, we may take such action as we deem appropriate to deal with the breach, including suspending your access to the website, prohibiting you from accessing the website, blocking computers using your IP address from accessing the website, contacting your internet service provider to request that they block your access to the website and/or bringing court proceedings against you.
+ 
+	<h4><b>Variation</b></h4>
+We may revise these terms of use from time to time. Revised terms of use will apply to the use of our website from the date of publication of the revised terms of use on our website.
+ 
+	<h4><b>Assignment</b></h4>
+We may transfer, sub-contract or otherwise deal with our rights and/or obligations under these terms of use without notifying you or obtaining your consent.
+You may not transfer, sub-contract or otherwise deal with your rights and/or obligations under these terms of use.
+ 
+	<h4><b>Severability</b></h4>
+If a provision of these terms of use is determined by any court or other competent authority to be unlawful and/or unenforceable, the other provisions will continue in effect. If any unlawful and/or unenforceable provision would be lawful or enforceable if part of it were deleted, that part will be deemed to be deleted, and the rest of the provision will continue in effect.
+ 
+	<h4><b>Exclusion of third party rights</b></h4>
+These terms of use are for the benefit of you and us, and are not intended to benefit any third party or be enforceable by any third party. The exercise of our and your rights in relation to these terms of use is not subject to the consent of any third party.
+
+	<h4><b>Entire agreement</b></h4>
+Subject to the first paragraph of Limitations and exclusions of liability, these terms of use, together with our privacy policy, constitute the entire agreement between you and us in relation to your use of our website and supersede all previous agreements in respect of your use of our website.
+ 
+	<h4><b>Law and jurisdiction</b></h4>
+These terms of use will be governed by and construed in accordance with English law, and any disputes relating to these terms of use will be subject to the [non-]exclusive jurisdiction of the courts of England and Wales.
+ 
+	<h4><b>Registrations and authorisations</b></h4>
+We are subject to block or unregister users due to misconduct or misuse, which is supervised by Rhode Island College.
+ 
+	<h4><b>Our details</b></h4>
+The full name of our company is Bookeeper.
+We are registered in England and Wales under registration number 401.
+Our registered address is 600 mount pleasant ave, Providence, Rhode Island, 02908.
+You can contact us by email to company@collegebookseller.com.
+
+<label for="Terms&Conditions Title"><b>Website Terms and Conditions for www.CollegeBookSeller.com</b></label>
+</p></center>
+    </div>
+  </form>
+
+</body>
+<center><div>Copy Right by <a href="aboutus.html">&copy; Bookeepers</a></center></div>
+</html>

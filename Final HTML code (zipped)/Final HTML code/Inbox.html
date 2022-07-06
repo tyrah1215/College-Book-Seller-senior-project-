@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang ="en">
+<style>
+.bg-image {
+  /* The image used */
+  background-image: url("books.jpg");
+  
+
+  /* Full height */
+  height: 100%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px;
+  font-weight: bold;
+  
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #283c3c;
+  overflow: hidden;
+}
+
+  
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #ebdcd2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #197378;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #197378;
+  color: #ebdcd2;
+}
+body{
+    color: #000;
+    margin-top:20px;
+}
+.section {
+    padding: 100px 0;
+    position: relative;
+}
+.gray-bg {
+    background-color: #f5f5f5;
+}
+img {
+    max-width: 80%;
+}
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+/* Settings cog task bar */
+.topnavset a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav .search-container {
+  float: right;
+}
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.topnav .search-container button {
+  float: center;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #782d23;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+.topnav .search-container button:hover {
+  background: #c34637;
+}
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+body {
+  padding: 25px;
+  background-color: white;
+  color: black;
+  font-size: 25px;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+* { margin: 0px; padding: 0px; }
+body {
+	background: #f0f1f2;
+	font:12px "Open Sans", sans-serif; 
+}
+#view-code{
+  color:#89a2b5;    
+  opacity:0.7;
+  font-size:14px;
+  text-transform:uppercase;
+  font-weight:700;
+  text-decoration:none;
+  position: relative;
+  left:50%;margin-left:-50px;
+  z-index:200;
+}
+#view-code:hover{opacity:1;}
+#chatbox{
+	width:350px;
+	background:#fff;
+	border-radius:20px;
+	overflow:hidden;
+	height:484px;
+	position: relative;
+	top:100px;
+	left:50%;
+	margin-left:-155px;
+}
+
+#friendslist{
+	position:absolute;
+	top:0;
+	left:0;
+	width:350px;
+	height:484px;
+}
+#topmenu{
+	height:69px;
+	width:350px;
+	border-bottom:1px solid #d8dfe3;	
+}
+#topmenu span{
+	float:left;	
+	width: 96px;
+    height: 70px;
+    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/top-menu.png") -3px -118px no-repeat;
+}
+#topmenu span.friends{margin-bottom:-1px;}
+#topmenu span.chats{background-position:-95px 25px; cursor:pointer;}
+#topmenu span.chats:hover{background-position:-95px -46px; cursor:pointer;}
+#topmenu span.history{background-position:-190px 24px; cursor:pointer;}
+#topmenu span.history:hover{background-position:-190px -47px; cursor:pointer;}
+.friend{
+	height:70px;
+	border-bottom:1px solid #e7ebee;		
+	position:relative;
+}
+.friend:hover{
+	background:#f1f4f6;
+	cursor:pointer;
+}
+.friend img{
+	width:40px;
+	height: 40px;
+	border-radius:50%;
+	margin:15px;
+	float:left;
+}
+.floatingImg{
+	width:40px;
+	border-radius:50%;
+	position:absolute;
+	top:0;
+	left:12px;
+	border:3px solid #fff;
+}
+.friend p{
+	padding:15px 0 0 0;			
+	float:left;
+	width:220px;
+}
+.friend p strong{
+  font-weight:600;
+  font-size:15px;
+	color:#597a96;  
+
+}
+.friend p span{
+	font-size:13px;
+	font-weight:400;
+	color:#aab8c2;
+}
+.friend .status{
+	background:#26c281;
+	border-radius:50%;	
+	width:9px;
+	height:9px;
+	position:absolute;
+	top:31px;
+	right:17px;
+}
+.friend .status.away{background:#ffce54;}
+.friend .status.inactive{background:#eaeef0;}
+#chatview{
+	width:350px;
+	height:484px;
+	position:absolute;
+	top:0;
+	left:0;	
+	display:none;
+	background:#fff;
+}
+#profile{
+	height:153px;
+	overflow:hidden;
+	text-align:center;
+	color:#fff;
+}
+.p1 #profile{
+	background:#fff url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/timeline1.png") 0 0 no-repeat;
+}
+#profile .avatar{
+	width:68px;
+	border:3px solid #fff;
+	margin:23px 0 0;
+	border-radius:50%;
+}
+#profile  p{
+	font-weight:600;
+	font-size:15px;
+	margin:118px 0 -1px;
+	opacity:0;
+	-webkit-transition: all 200ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+	   -moz-transition: all 200ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+	    -ms-transition: all 200ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+	     -o-transition: all 200ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+	        transition: all 200ms cubic-bezier(0.000, 0.995, 0.990, 1.000);	
+}
+#profile  p.animate{
+	margin-top:97px;
+	opacity:1;
+	-webkit-transition: all 200ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+	   -moz-transition: all 200ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+	    -ms-transition: all 200ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+	     -o-transition: all 200ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+	        transition: all 200ms cubic-bezier(0.000, 0.995, 0.990, 1.000);	
+}
+#profile  span{
+	font-weight:400;
+	font-size:11px;
+}
+
+.cx, .cy{
+	background:#fff;
+	position:absolute;
+	width:0px;
+	top:15px;
+	right:15px;
+	height:3px;
+	-webkit-transition: all 250ms ease-in-out;
+	   -moz-transition: all 250ms ease-in-out;
+		-ms-transition: all 250ms ease-in-out;
+		 -o-transition: all 250ms ease-in-out;
+			transition: all 250ms ease-in-out;
+}
+.cx.s1, .cy.s1{	
+	right:0;	
+	width:20px;	
+	-webkit-transition: all 100ms ease-out;
+	   -moz-transition: all 100ms ease-out;
+		-ms-transition: all 100ms ease-out;
+		 -o-transition: all 100ms ease-out;
+			transition: all 100ms ease-out;
+}
+.cy.s2{	
+	-ms-transform: rotate(50deg); 
+	-webkit-transform: rotate(50deg); 
+	transform: rotate(50deg);		 
+	-webkit-transition: all 100ms ease-out;
+	   -moz-transition: all 100ms ease-out;
+		-ms-transition: all 100ms ease-out;
+		 -o-transition: all 100ms ease-out;
+			transition: all 100ms ease-out;
+}
+.cy.s3{	
+	-ms-transform: rotate(45deg); 
+	-webkit-transform: rotate(45deg); 
+	transform: rotate(45deg);		 
+	-webkit-transition: all 100ms ease-out;
+	   -moz-transition: all 100ms ease-out;
+		-ms-transition: all 100ms ease-out;
+		 -o-transition: all 100ms ease-out;
+			transition: all 100ms ease-out;
+}
+.cx.s1{	
+	right:0;	
+	width:20px;	
+	-webkit-transition: all 100ms ease-out;
+	   -moz-transition: all 100ms ease-out;
+		-ms-transition: all 100ms ease-out;
+		 -o-transition: all 100ms ease-out;
+			transition: all 100ms ease-out;
+}
+.cx.s2{	
+	-ms-transform: rotate(140deg); 
+	-webkit-transform: rotate(140deg); 
+	transform: rotate(140deg);		 
+	-webkit-transition: all 100ms ease-out;
+	   -moz-transition: all 100ms ease-out;
+		-ms-transition: all 100ease-out;
+		 -o-transition: all 100ms ease-out;
+			transition: all 100ms ease-out;
+}
+.cx.s3{	
+	-ms-transform: rotate(135deg); 
+	-webkit-transform: rotate(135deg); 
+	transform: rotate(135deg);		 
+	-webkit-transition: all 100ease-out;
+	   -moz-transition: all 100ms ease-out;
+		-ms-transition: all 100ms ease-out;
+		 -o-transition: all 100ms ease-out;
+			transition: all 100ms ease-out;
+}
+#chatview, #sendmessage { 
+overflow:hidden; 
+border-radius:6px; 
+}
+</style>
+<head>
+  <title>CollegeBookSeller.com</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<div class="bg-image">
+			<h1 class="site-title" style="font-family: Garamond; color: white; font-size: 60px;"><center>College Book Seller</center></h1>
+			<h2 class="site-description" style="font-family: serif; color: white; font-size: 30px;"><center>Welcome to College Book Seller, here you can sell your past course textbooks or even buy current textbooks</center></h2>
+		</div>
+    <div class="topnav">
+      <a href="HomePage.html">Home</a>
+    <div class="dropdown">
+      <a href="Profile.html">Profile</a>
+    <div class="dropdown-content">
+      <a href="Profile.html">View Profile</a>
+      <a href="Listing.html">Post</a>
+    </div>
+	</div>
+          <a href="WishListPage.html">Wishlist</a>
+          <a class="active" href="Inbox.html">Inbox</a>
+    <div class="topnavset">
+    <div class="search-container">
+        <form action="/action_page.php">
+        <input type="text" placeholder="Search.." name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+    </div>
+    <div class="dropdown">
+      <a href="settingcog.html"><i class="fa fa-cog"></i></a> 
+    <div class="dropdown-content">
+      <a href="settingcog.html">Edit Profile</a>
+      <a href="LoginPage.html">Logout</a>
+    </div>
+	</div>
+	<a href="#" onclick="myFunction()">Dark Mode</a>
+    </div>
+
+<script>
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+</script>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+<div id="chatbox">
+	<div id="friendslist">
+    	<div id="topmenu">
+        	<span class="friends"></span>
+        </div>
+        
+        <div id="friends">
+        	<div class="friend">
+            	<img src="chem.png" />
+                <p>
+                	<strong><a href="ChemInbox.html">Chemistry: The Central Science</a></strong>
+	                <span>3 hours</span>
+                </p>
+                <div class="status available"></div>
+            </div>
+            
+            <div class="friend">
+            	<img src="bio.png"/>
+                <p>
+                	<strong><a href="BioInbox.html">Campbell Biology 12th edition</a></strong>
+	                <span>6 hours</span>
+                </p>
+                <div class="status away"></div>
+            </div>
+            
+            <div class="friend">
+            	<img src="bio2.png" />
+                <p>
+                	<strong><a href="Bio2Inbox.html">Campbell Biology 11th edition</a></strong>
+	                <span>2 days</span>
+                </p>
+                <div class="status inactive"></div>
+            </div>
+            
+            <div class="friend">
+            	<img src="nurse.png" />
+                <p>
+                	<strong><a href="NurseInbox.html">Nursing: Pharmacology and the Nursing Process</a></strong>
+	                <span>2 days</span>
+                </p>
+                <div class="status inactive"></div>
+            </div>
+            
+            <div class="friend">
+            	<img src="spanish.png" />
+                <p>
+                <strong><a href="SpanishInbox.html">Spanish: Buen Viaje</a></strong>
+	                <span>4 days</span>
+                </p>
+                <div class="status inactive"></div>
+            </div>
+            
+			<div class="friend">
+            	<img src="math.png" />
+                <p>
+                <strong><a href="MathInbox.html">Mathmatics: Intermediate Algebra</a></strong>
+	                <span>4 days</span>
+                </p>
+                <div class="status inactive"></div>
+			</div>
+			
+			<div class="friend">
+            	<img src="#" />
+                <p>
+                <strong><a href="#"></a></strong>
+	                <span></span>
+                </p>
+                <div class="status inactive"></div>
+			</div>
+			
+			<div class="friend">
+            	<img src="#" />
+                <p>
+                <strong><a href="#"></a></strong>
+	                <span></span>
+                </p>
+                <div class="status inactive"></div>
+            </div>  
+			
+		</div>
+	</div>	
+</div>
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+</body>
+<center><div>Copy Right by <a href="aboutus.html">&copy; Bookeepers</a></center></div>
+</html>

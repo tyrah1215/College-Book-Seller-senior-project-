@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang ="en">
+<style>
+.bg-image {
+  /* The image used */
+  background-image: url("books.jpg");
+  
+
+  /* Full height */
+  height: 100%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px;
+  font-weight: bold;
+  
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #283c3c;
+  overflow: hidden;
+}
+
+  
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #ebdcd2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #197378;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #197378;
+  color: #ebdcd2;
+}
+body{
+    color: #000;
+    margin-top:20px;
+}
+.section {
+    padding: 100px 0;
+    position: relative;
+}
+.gray-bg {
+    background-color: #f5f5f5;
+}
+img {
+    max-width: 80%;
+}
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+/* Settings cog task bar */
+.topnavset a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav .search-container {
+  float: right;
+}
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.topnav .search-container button {
+  float: center;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #782d23;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+.topnav .search-container button:hover {
+  background: #c34637;
+}
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+.btn {
+  background-color: #197378;
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #c34637;
+}
+</style>
+<head>
+  <title>CollegeBookSeller.com</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<div class="bg-image">
+			<h1 class="site-title" style="font-family: Garamond; color: white; font-size: 60px;"><center>College Book Seller</center></h1>
+			<h2 class="site-description" style="font-family: serif; color: white; font-size: 30px;"><center>Welcome to College Book Seller, here you can sell your past course textbooks or even buy current textbooks</center></h2>
+		</div>
+    <div class="topnav">
+      <a class="active" href="HomePage.html">Home</a>
+    <div class="dropdown">
+      <a href="Profile.html">Profile</a>
+    <div class="dropdown-content">
+      <a href="Profile.html">View Profile</a>
+      <a href="Listing.html">Post</a>
+    </div>
+	</div>
+          <a href="WishListPage.html">Wishlist</a>
+          <a href="Inbox.html">Inbox</a>
+    <div class="topnavset">
+    <div class="search-container">
+        <form action="/action_page.php">
+        <input type="text" placeholder="Search.." name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+    </div>
+    <div class="dropdown">
+      <a href="settingcog.html"><i class="fa fa-cog"></i></a> 
+    <div class="dropdown-content">
+      <a href="settingcog.html">Edit Profile</a>
+      <a href="LoginPage.html">Logout</a>
+    </div>
+	</div>
+	<a href="#" onclick="myFunction()">Dark Mode</a>
+    </div>
+</head>
+<script>
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+</script>
+
+<body>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" type="text/css" href="https://demo.plantpot.works/assets/css/normalize.css">
+<link rel="stylesheet" href="https://use.typekit.net/opg3wle.css">
+<link rel='stylesheet' href='css/woocommerce-layout.css' type='text/css' media='all'/>
+<link rel='stylesheet' href='css/woocommerce-smallscreen.css' type='text/css' media='only screen and (max-width: 768px)'/>
+<link rel='stylesheet' href='css/woocommerce.css' type='text/css' media='all'/>
+<link rel='stylesheet' href='css/font-awesome.min.css' type='text/css' media='all'/>
+<link rel='stylesheet' href='style.css' type='text/css' media='all'/>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Oswald:400,500,700%7CRoboto:400,500,700%7CHerr+Von+Muellerhoff:400,500,700%7CQuattrocento+Sans:400,500,700' type='text/css' media='all'/>
+<link rel='stylesheet' href='css/easy-responsive-shortcodes.css' type='text/css' media='all'/>
+<body class="archive post-type-archive post-type-archive-product woocommerce woocommerce-page">
+		<div id="content" class="site-content">
+			<div id="primary" class="content-area column full">
+				<main id="main" class="site-main" role="main">
+				<form class="woocommerce-ordering" method="get">
+					<select name="orderby" class="orderby">
+						<option value="menu_order" selected="selected">Default sorting</option>
+						<option value="date">Sort by newness</option>
+						<option value="price">Sort by price: low to high</option>
+						<option value="price-desc">Sort by price: high to low</option>
+					</select>
+				</form>
+				<ul class="products">
+				
+					<li class="first product">
+					<img src="chem.png" alt="Textbook">
+					<h3>Chemistry: The Central Science</h3>
+					<span class="price"><span class="amount">$65.99</span></span>
+					</a><a href="ChemInbox.html" class="button">Inbox</a>
+					<button class="btn"><i class="fa fa-heart"></i></button>
+					</li>
+
+					<li class="second product">
+					<img src="bio.png" alt="Textbook">
+					<h3>Campbell Biology 12th edition</h3>
+					<span class="price"><span class="amount">$85.99</span></span>
+					</a><a href="BioInbox.html" class="button">Inbox</a>
+					<button class="btn"><i class="fa fa-heart"></i></button>
+					</li>
+					
+					<li class="third product">
+					<img src="bio2.png" alt="Textbook" width="500" height="333">
+					<h3>Campbell Biology 11th edition</h3>
+					<span class="price"><span class="amount">$45.99</span></span>
+					</a><a href="Bio2Inbox.html" class="button">Inbox</a>
+					<button class="btn"><i class="fa fa-heart"></i></button>
+					</li>
+					
+					<li class="last product">
+					<img src="nurse.png" alt="Textbook" width="500" height="333">
+					<h3>Nursing: Pharmacology and the Nursing Process</h3>
+					<span class="price"><span class="amount">$90.00</span></span>
+					</a><a href="NurseInbox.html" class="button">Inbox</a>
+					<button class="btn"><i class="fa fa-heart"></i></button>
+					</li>
+					
+					<li class="first product">
+					<img src="spanish.png" alt="Textbook" width="500" height="333">
+					<h3>Spanish: Buen Viaje</h3>
+					<span class="price"><span class="amount">$35.99</span></span>
+					</a><a href="SpanishInbox.html" class="button">Inbox</a>
+					<button class="btn"><i class="fa fa-heart"></i></button>
+					</li>
+					
+					<li class="second product">
+					<img src="math.png" alt="product seven" width="500" height="333">
+					<h3>Mathmatics: Intermediate Algebra</h3>
+					<span class="price"><span class="amount">$40.00</span></span>
+					</a><a href="MathInbox.html" class="button">Inbox</a>
+					<button class="btn"><i class="fa fa-heart"></i></button>
+					</li>
+					
+					<li class="third product">
+					<img src="econ.jfif" alt="Textbook" width="500" height="333">
+					<h3>Contemporary Economics: An Apllications Approach</h3>
+					<span class="price"><span class="amount">$62.95</span></span>
+					</a><a href="EconInbox.html" class="button">Inbox</a>
+					<button class="btn"><i class="fa fa-heart"></i></button>
+					</li>
+						
+					<li class="last product">
+					<img src="ASL.gif" alt="Textbook" width="1000" height="1000">
+					<h3>Signing Naturally Unit 1-6 - Workbook - With 2 DVDs</h3>
+					<span class="price"><span class="amount">$97.09</span></span>
+					</a><a href="ASLInbox.html" class="button">Inbox</a>
+					<button class="btn"><i class="fa fa-heart"></i></button>
+					</li>
+				</ul>
+				<nav class="woocommerce-pagination">
+				<ul class="page-numbers">
+					<li><span class="page-numbers current">1</span></li>
+					<li><a class="next page-numbers" href="#">next</a></li>
+				</ul>
+				</nav>
+				</main>
+				<!-- #main -->
+			</div>
+			<!-- #primary -->
+		</div>
+<script src='js/jquery.js'></script>
+<script src='js/plugins.js'></script>
+<script src='js/scripts.js'></script>
+<script src='js/masonry.pkgd.min.js'></script>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id09');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+<script src="https://unpkg.com/vue@2.5.16/dist/vue.js"></script>
+</body>
+<center><div>Copy Right by <a href="aboutus.html">&copy; Bookeepers</a></center></div>
+</html>

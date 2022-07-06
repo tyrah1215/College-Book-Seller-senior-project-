@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang ="en">
+<style>
+.bg-image {
+  /* The image used */
+  background-image: url("books.jpg");
+  
+
+  /* Full height */
+  height: 100%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px;
+  font-weight: bold;
+  
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #283c3c;
+  overflow: hidden;
+}
+
+  
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #ebdcd2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #197378;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #197378;
+  color: #ebdcd2;
+}
+body{
+    color: #000;
+    margin-top:20px;
+}
+.section {
+    padding: 100px 0;
+    position: relative;
+}
+.gray-bg {
+    background-color: #f5f5f5;
+}
+img {
+    max-width: 80%;
+}
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+/* Settings cog task bar */
+.topnavset a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav .search-container {
+  float: right;
+}
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.topnav .search-container button {
+  float: center;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #782d23;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+.topnav .search-container button:hover {
+  background: #c34637;
+}
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+.btn {
+  background-color: #197378;
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #c34637;
+}
+
+.user-card-full {
+    overflow: hidden
+}
+
+.card {
+    border-radius: 5px;
+    -webkit-box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
+    box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
+    border: none;
+    margin-bottom: 30px
+}
+
+.m-r-0 {
+    margin-right: 0px
+}
+
+.m-l-0 {
+    margin-left: 0px
+}
+
+.user-card-full .user-profile {
+    border-radius: 5px 0 0 5px
+}
+
+.bg-c-lite-green {
+    background: #782d23;
+}
+
+.user-profile {
+    padding: 20px 0
+}
+
+.card-block {
+    padding: 1.25rem
+}
+
+.m-b-25 {
+    margin-bottom: 25px
+}
+
+.img-radius {
+    border-radius: 5px
+}
+
+h6 {
+    font-size: 14px
+}
+
+.card .card-block p {
+    line-height: 25px
+}
+
+@media only screen and (min-width: 1400px) {
+    p {
+        font-size: 14px
+    }
+}
+
+.card-block {
+    padding: 1.25rem
+}
+
+.b-b-default {
+    border-bottom: 1px solid #e0e0e0
+}
+
+.m-b-20 {
+    margin-bottom: 20px
+}
+
+.p-b-5 {
+    padding-bottom: 5px !important
+}
+
+.card .card-block p {
+    line-height: 25px
+}
+
+.m-b-10 {
+    margin-bottom: 10px
+}
+
+.text-muted {
+    color: #919aa3 !important
+}
+
+.b-b-default {
+    border-bottom: 1px solid #e0e0e0
+}
+
+.f-w-600 {
+    font-weight: 600
+}
+
+.m-b-20 {
+    margin-bottom: 20px
+}
+
+.m-t-40 {
+    margin-top: 20px
+}
+
+.p-b-5 {
+    padding-bottom: 5px !important
+}
+
+.m-b-10 {
+    margin-bottom: 10px
+}
+
+.m-t-40 {
+    margin-top: 20px
+}
+
+.user-card-full .social-link li {
+    display: inline-block
+}
+
+.user-card-full .social-link li a {
+    font-size: 20px;
+    margin: 0 10px 0 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out
+}
+
+</style>
+<head>
+  <title>CollegeBookSeller.com</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<div class="bg-image">
+			<h1 class="site-title" style="font-family: Garamond; color: white; font-size: 60px;"><center>College Book Seller</center></h1>
+			<h2 class="site-description" style="font-family: serif; color: white; font-size: 30px;"><center>Welcome to College Book Seller, here you can sell your past course textbooks or even buy current textbooks</center></h2>
+		</div>
+    <div class="topnav">
+      <a href="HomePage.html">Home</a>
+    <div class="dropdown">
+      <a class="active" href="Profile.html">Profile</a>
+    <div class="dropdown-content">
+      <a href="Profile.html">View Profile</a>
+      <a href="Listing.html">Post</a>
+    </div>
+	</div>
+          <a href="WishListPage.html">Wishlist</a>
+          <a href="Inbox.html">Inbox</a>
+    <div class="topnavset">
+    <div class="search-container">
+        <form action="/action_page.php">
+        <input type="text" placeholder="Search.." name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+    </div>
+    <div class="dropdown">
+      <a href="settingcog.html"><i class="fa fa-cog"></i></a> 
+    <div class="dropdown-content">
+      <a href="settingcog.html">Edit Profile</a>
+      <a href="LoginPage.html">Logout</a>
+    </div>
+	</div>
+	<a href="#" onclick="myFunction()">Dark Mode</a>
+    </div>
+</head>
+<script>
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+</script>
+
+<body>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" type="text/css" href="https://demo.plantpot.works/assets/css/normalize.css">
+<link rel="stylesheet" href="https://use.typekit.net/opg3wle.css">
+<link rel='stylesheet' href='css/woocommerce-layout.css' type='text/css' media='all'/>
+<link rel='stylesheet' href='css/woocommerce-smallscreen.css' type='text/css' media='only screen and (max-width: 768px)'/>
+<link rel='stylesheet' href='css/woocommerce.css' type='text/css' media='all'/>
+<link rel='stylesheet' href='css/font-awesome.min.css' type='text/css' media='all'/>
+<link rel='stylesheet' href='style.css' type='text/css' media='all'/>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Oswald:400,500,700%7CRoboto:400,500,700%7CHerr+Von+Muellerhoff:400,500,700%7CQuattrocento+Sans:400,500,700' type='text/css' media='all'/>
+<link rel='stylesheet' href='css/easy-responsive-shortcodes.css' type='text/css' media='all'/>
+<body class="archive post-type-archive post-type-archive-product woocommerce woocommerce-page">
+		<div id="content" class="site-content">
+		<div id="primary" class="content-area column full">
+		<main id="main" class="site-main" role="main">
+	<div class="page-content page-container" id="page-content">
+    <div class="padding">
+        <div class="row container d-flex justify-content-center">
+            <div class="col-xl-6 col-md-12">
+                <div class="card user-card-full">
+                    <div class="row m-l-0 m-r-0">
+                        <div class="col-sm-4 bg-c-lite-green user-profile">
+                            <div class="card-block text-center text-white">
+                                <div class="m-b-25"> <img src="https://img.icons8.com/bubbles/100/000000/user.png" class="img-radius" alt="User-Profile-Image"> </div>
+                                <h6 class="f-w-600" style="font-size: 30px; color: white">John Doe</h6>
+                              <i class=" mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"></i>
+                            </div>
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="card-block">
+                                <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Information</h6>
+                                <div class="row"> 
+                                    <div class="col-sm-6">
+                                        <p class="m-b-10 f-w-600">Email</p>
+                                        <h6 class="text-muted f-w-400">JohnDoe1@domain.com</h6>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class="m-b-10 f-w-600">Major</p>
+                                        <h6 class="text-muted f-w-400">Communications</h6>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class="m-b-10 f-w-600">Age</p>
+                                        <h6 class="text-muted f-w-400">22</h6>
+                                    </div>
+                                     <div class="col-sm-6">
+                                        <p class="m-b-10 f-w-600">University</p>
+                                        <h6 class="text-muted f-w-400">Rhode Island College</h6>
+                                    </div>
+                                     <div class="col-sm-6">
+                                        <p class="m-b-10 f-w-600">Location</p>
+                                        <h6 class="text-muted f-w-400">Rhode Island</h6>
+                                    </div>
+                                </div>
+                                </div>
+                                
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+			</div>
+		</div>
+	</div>
+	</div>
+				<ul class="products">
+				<h3 style="font-size: 25px;">SOLD BOOKS</h3>
+				
+					<li class="first product">
+					<img src="chem.png" alt="Textbook">
+					<h3>Chemistry: The Central Science</h3>
+					<span class="price"><span class="amount">$65.99</span></span>
+					</li>
+
+					<li class="second product">
+					<img src="bio.png" alt="Textbook">
+					<h3>Campbell Biology 12th edition</h3>
+					<span class="price"><span class="amount">$85.99</span></span>
+					</li>
+					
+					<li class="third product">
+					<img src="nurse.png" alt="Textbook" width="500" height="333">
+					<h3>Nursing: Pharmacology and the Nursing Process</h3>
+					<span class="price"><span class="amount">$90.00</span></span>
+					</li>
+					
+					<li class="last product">
+					<img src="spanish.png" alt="Textbook" width="500" height="333">
+					<h3>Spanish: Buen Viaje</h3>
+					<span class="price"><span class="amount">$35.99</span></span>
+					</li>
+				</ul>
+				</main>
+		</div>
+		</div>
+<script src='js/jquery.js'></script>
+<script src='js/plugins.js'></script>
+<script src='js/scripts.js'></script>
+<script src='js/masonry.pkgd.min.js'></script>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id09');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+</body>
+<center><div>Copy Right by <a href="aboutus.html">&copy; Bookeepers</a></center></div>
+</html>
